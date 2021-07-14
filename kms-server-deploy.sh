@@ -115,12 +115,12 @@ check_install_status() {
 # 开机自启动
 auto_start() {
 	if [[ x"${release}" == x"centos" ]]; then
-        if ! wget --no-check-certificate -O /etc/init.d/kms https://raw.githubusercontent.com/Mr-xn/kms-server-deploy/master/kms; then
+        if ! wget --no-check-certificate -O /etc/init.d/kms https://cdn.jsdelivr.net/gh/Mr-xn/kms-server-deploy/master/kms; then
             echo -e "${Error} Failed to download KMS Server script."
             exit 1
         fi
     elif [[ x"${release}" == x"debian" || x"${release}" == x"ubuntu" ]]; then
-        if ! wget --no-check-certificate -O /etc/init.d/kms https://raw.githubusercontent.com/Mr-xn/kms-server-deploy/master/kms-debian; then
+        if ! wget --no-check-certificate -O /etc/init.d/kms https://cdn.jsdelivr.net/gh/Mr-xn/kms-server-deploy/master/kms-debian; then
             echo -e "${Error} Failed to download KMS Server script."
             exit 1
         fi
